@@ -179,7 +179,7 @@ export default function AdminDashboardPage() {
             </div>
           ) : athletes.length === 0 ? (
             <div className="p-8 text-center text-gray-500 dark:text-gray-400 border-2 border-dashed border-gray-200 dark:border-gray-700 m-6 rounded-lg">
-              No athletes found. Click "Add Athlete" to create one.
+              No athletes found. Click &quot;Add Athlete&quot; to create one.
             </div>
           ) : (
             <div className="overflow-x-auto">
