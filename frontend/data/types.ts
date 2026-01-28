@@ -169,6 +169,23 @@ export interface Athlete {
   created_at: string
 }
 
+export interface ApiMeet {
+  id: number
+  name: string
+  meet_date: string
+  location: string
+  created_at: string
+}
+
+export interface ApiResult {
+  id: number
+  athlete_id: number
+  meet_id: number
+  time_seconds: number
+  place_overall: number
+  created_at: string
+}
+
 export interface StatHighlight {
   label: string
   value: string | number

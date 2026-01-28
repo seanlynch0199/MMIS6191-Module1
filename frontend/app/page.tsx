@@ -3,6 +3,7 @@ import { siteConfig } from '@/data/site'
 import { runners, getCaptains } from '@/data/runners'
 import { schedules, getUpcomingMeets } from '@/data/schedules'
 import { StatCard } from '@/components/StatCard'
+import { ApiMeetsPreview } from '@/components/ApiMeetsPreview'
 import { formatDateShort } from '@/lib/utils'
 
 export default function HomePage() {
@@ -115,6 +116,24 @@ export default function HomePage() {
               No upcoming meets scheduled. Check back soon!
             </p>
           )}
+        </div>
+      </section>
+
+      {/* Meets from Database */}
+      <section className="pb-16 bg-white dark:bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
+              Meets (from database)
+            </h2>
+            <Link
+              href="/schedules"
+              className="text-prBlue-600 dark:text-prBlue-400 hover:underline font-medium"
+            >
+              View Full Schedule
+            </Link>
+          </div>
+          <ApiMeetsPreview />
         </div>
       </section>
 
